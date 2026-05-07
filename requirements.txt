@@ -1,7 +1,6 @@
-streamlit
-pathlib
-langchain-google-genai
-langchain
-sqlalchemy
-pandas
-sqlite3
+streamlit>=1.32,<2
+langchain>=0.2,<0.3
+langchain-google-genai>=1.0,<2
+sqlalchemy>=2.0,<3
+pandas>=2.0,<3
+python-dotenv>=1.0,<2
