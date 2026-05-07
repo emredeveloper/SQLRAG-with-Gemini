@@ -1,56 +1,50 @@
-# SQLRAG-Gemini Deposu
+# SQLRAG with Gemini
 
-## Tanıtım
-Bu depo, **SQLRAG-Gemini** projesine ait kodları ve belgeleri içerir. Proje hakkında daha fazla bilgi edinmek için lütfen aşağıdaki bölümleri inceleyin.
+SQLRAG with Gemini is a Streamlit-based demo for asking natural-language questions over a SQLite database and generating SQL-assisted answers with Gemini through LangChain.
 
-## İçerik
-- [Proje Hakkında](#proje-hakkında)
-- [Kullanım](#kullanım)
-- [Gereksinimler](#gereksinimler)
-- [Katılım](#katılım)
-- [Lisans](#lisans)
+## Features
 
-## Proje Hakkında
-**SQLRAG-Gemini**, veritabanı sorgularını optimize etmek ve geliştirmek için tasarlanmış bir araçtır. Bu proje, geliştiricilerin daha verimli ve etkili sorgular yazmasına yardımcı olmayı amaçlar.
+- Natural-language to SQL workflow
+- SQLite database support
+- Gemini integration through `langchain-google-genai`
+- Streamlit user interface
+- Simple local setup for experimentation
 
-## Kullanım
-1. Depoyu klonlayın:
-   ```bash
-   git clone https://github.com/your-username/SQLRAG-Gemini.git
-   ```
-2. Gerekli paketleri yükleyin:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Projeyi çalıştırın:
-   ```bash
-   python main.py
-   ```
+## Requirements
 
-## Gereksinimler
-- **Python 3.x**
-- **pip 3.x**
-- `requirements.txt` dosyasında belirtilen paketler
+- Python 3.10+
+- Google Gemini API access
+- A local SQLite database
 
-## Katılım
-Projeye katkıda bulunmak için lütfen aşağıdaki adımları takip edin:
+## Setup
 
-1. Bir fork oluşturun:
-   ```bash
-   git fork https://github.com/your-username/SQLRAG-Gemini.git
-   ```
-2. Değişikliklerinizi yapın ve commitleyin:
-   ```bash
-   git commit -m "Değişiklik açıklaması"
-   ```
-3. Değişikliklerinizi gönderin:
-   ```bash
-   git push origin your-branch
-   ```
+```bash
+git clone https://github.com/emredeveloper/SQLRAG-with-Gemini.git
+cd SQLRAG-with-Gemini
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
 
-## Lisans
-Bu proje, [MIT Lisansı](LICENSE) altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakabilirsiniz.
+Create a `.env` file in the project root:
 
----
-Herhangi bir sorunuz veya öneriniz varsa lütfen bizimle iletişime geçin. Teşekkürler!
+```env
+GOOGLE_API_KEY=your_gemini_key
+```
 
+## Run
+
+```bash
+streamlit run main.py
+```
+
+## Suggested Improvements
+
+- Add sample database schema and seed data
+- Add SQL safety checks before execution
+- Add examples for common questions
+- Add tests for query generation and database helpers
+
+## License
+
+MIT
